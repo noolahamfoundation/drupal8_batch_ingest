@@ -1,0 +1,41 @@
+# Uninstall this config when the feature is uninstalled
+dependencies:
+  enforced:
+    module:
+      - drupal8_batch_ingest
+
+id: node_metadata_ingest
+label: Import Nodes from CSV 
+migration_group: drupal8_batch_ingest
+
+source:
+  plugin: csv
+  path: modules/contrib/drupal8_batch_ingest/data/migration.csv
+
+  # 1 means you have a header row, 0 means you don't
+  header_row_count: 1
+
+  # Each migration needs a unique key per row in the csv.  Here we're using the file path.
+  keys:
+    - file 
+
+  # You can't enter string literals into a process plugin, but you can give it a constant as a 'source'.
+  constants:
+    # We're tagging our nodes as Images
+    model: Image 
+
+    # Everything gets created as admin
+    uid: 1
+
+# Set fields using values from the CSV
+process:
+  title: title
+  uid: constants/uid
+  field_description: description
+
+
+# We're making nodes
+destination:
+  plugin: 'entity:node'
+  default_bundle: islandora_object
+
