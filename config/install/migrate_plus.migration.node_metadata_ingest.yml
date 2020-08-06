@@ -4,7 +4,7 @@ dependencies:
     module:
       - drupal8_batch_ingest
 
-id: node_metadata_ingest
+id: import_nodes
 label: Import Nodes from CSV 
 migration_group: drupal8_batch_ingest
 
