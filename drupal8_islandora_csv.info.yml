@@ -1,7 +1,7 @@
-name: 'Migrate Islandora CSV'
+name: 'drupal8_batch_ingest'
 type: module
 description: 'A tutorial on how to migrate files into Islandora using a CSV file'
 core: 8.x
-package: 'Islandora'
+package: 'drupal8_batch_ingest'
 dependencies:
   - migrate_source_csv
