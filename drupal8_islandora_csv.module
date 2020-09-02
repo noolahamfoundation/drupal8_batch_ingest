@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Contains drupal8_batch_ingest.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function drupal8_batch_ingest_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the drupal8_batch_ingest module.
+    case 'help.page.drupal8_batch_ingest':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('dragomans_migrate') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function drupal8_batch_ingest_migration_plugins_alter(&$definitions) {
+  $definitions['migrate_csv']['source']['path'] = drupal_get_path('module', 'drupal8_batch_ingest') . $definitions['migrate_csv']['source']['path'];
+}
+
+
