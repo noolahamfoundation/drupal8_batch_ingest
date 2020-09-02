@@ -10,7 +10,7 @@ migration_group: drupal8_batch_ingest
 
 source:
   plugin: csv
-  path: modules/contrib/drupal8_batch_ingest/data/migration.csv
+  path: modules/drupal8_batch_ingest/data/migration.csv
 
   # 1 means you have a header row, 0 means you don't
   header_row_count: 1
