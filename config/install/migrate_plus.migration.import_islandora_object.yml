@@ -4,8 +4,8 @@ dependencies:
     module:
       - drupal8_batch_ingest
 
-id: import_nodes
-label: Import Nodes from CSV 
+id: import_islandora_object
+label: 'Import Nodes from CSV'
 migration_group: drupal8_batch_ingest
 
 source:
@@ -29,6 +29,9 @@ source:
 
 # Set fields using values from the CSV
 process:
+  type:
+    plugin: default_value
+    default_value: islandora_object
   title: title
   uid: constants/uid
   field_description: description
@@ -37,5 +40,6 @@ process:
 # We're making nodes
 destination:
   plugin: 'entity:node'
-  default_bundle: islandora_object
-
+migration_dependencies:
+  required: {  }
+  optional: {  }
