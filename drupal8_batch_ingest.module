@@ -23,12 +23,3 @@ function drupal8_batch_ingest_help($route_name, RouteMatchInterface $route_match
   }
 }
 
-
-/**
- * Implements hook_migration_plugins_alter().
- */
-function drupal8_batch_ingest_migration_plugins_alter(&$definitions) {
-  $definitions['migrate_csv']['source']['path'] = drupal_get_path('module', 'drupal8_batch_ingest') . $definitions['migrate_csv']['source']['path'];
-}
-
-
