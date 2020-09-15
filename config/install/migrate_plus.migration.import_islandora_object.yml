@@ -33,6 +33,8 @@ process:
     plugin: default_value
     default_value: islandora_object
   title: title
+  dewey_classification: classification_dewey
+  genere: genre
   uid: constants/uid
   field_description: description
 
