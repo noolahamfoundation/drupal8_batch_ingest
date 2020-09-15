@@ -11,13 +11,14 @@ migration_group: drupal8_batch_ingest
 source:
   plugin: csv
   path: modules/drupal8_batch_ingest/data/migration.csv
+  ids: [id]
 
   # 1 means you have a header row, 0 means you don't
   header_row_count: 1
 
   # Each migration needs a unique key per row in the csv.  Here we're using the file path.
   keys:
-    - file 
+    - id
 
   # You can't enter string literals into a process plugin, but you can give it a constant as a 'source'.
   constants:
