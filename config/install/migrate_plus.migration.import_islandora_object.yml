@@ -32,7 +32,7 @@ source:
        name: id
        label: 'Unique Id'
      1:
-       name: dewey_classification
+       name: classification_dewey
        label: 'Dewey Classification'
      2:
        name: genre
