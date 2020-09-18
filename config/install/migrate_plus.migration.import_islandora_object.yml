@@ -27,25 +27,14 @@ source:
     # Everything gets created as admin
     uid: 1
 
-   fields:
-     0:
-       name: id
-       label: 'id'
-     1:
-       name: classification_dewey
-       label: 'classification_dewey'
-     2:
-       name: genre
-       label: 'genre'
-
 # Set fields using values from the CSV
 process:
   type:
     plugin: default_value
     default_value: islandora_object
   title: title
-  dewey_classification: classification_dewey
-  genere: genre
+  dewey_classification: field_dewey_classification
+  genere: field_genre
   uid: constants/uid
   field_description: description
 
