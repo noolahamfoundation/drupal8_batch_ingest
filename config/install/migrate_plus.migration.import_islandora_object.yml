@@ -34,7 +34,7 @@ process:
     default_value: islandora_object
   title: title
   field_dewey_classification: field_dewey_classification
-  field_author: field_author
+  author: author
   uid: constants/uid
   field_description: description
 
