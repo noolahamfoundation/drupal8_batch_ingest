@@ -27,6 +27,17 @@ source:
     # Everything gets created as admin
     uid: 1
 
+   fields:
+     0:
+       name: id
+       label: 'Unique Id'
+     1:
+       name: dewey_classification
+       label: 'Dewey Classification'
+     2:
+       name: genre
+       label: 'Genre'
+
 # Set fields using values from the CSV
 process:
   type:
