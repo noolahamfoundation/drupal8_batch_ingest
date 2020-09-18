@@ -30,13 +30,13 @@ source:
    fields:
      0:
        name: id
-       label: 'Unique Id'
+       label: 'id'
      1:
        name: classification_dewey
-       label: 'Dewey Classification'
+       label: 'classification_dewey'
      2:
        name: genre
-       label: 'Genre'
+       label: 'genre'
 
 # Set fields using values from the CSV
 process:
