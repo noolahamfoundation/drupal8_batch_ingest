@@ -36,7 +36,6 @@ process:
 
   uid: constants/uid
 
-
 # We're making nodes
 destination:
   plugin: 'entity:node'
