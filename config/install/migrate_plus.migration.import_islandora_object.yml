@@ -44,65 +44,6 @@ process:
 
   uid: constants/uid
 
-  photographers:
-    -
-      source: photographer
-      plugin: skip_on_empty
-      method: process
-    -
-      plugin: explode
-      delimiter: '|'
-    -
-      plugin: str_to_assoc
-      key: 'name'
-
-  linked_agent_pht:
-    plugin: sub_process
-    source: '@photographers'
-    process:
-      target_id:
-        plugin: entity_generate
-        source: name
-        entity_type: taxonomy_term
-        value_key: name
-        bundle_key: vid
-        bundle: person
-      rel_type:
-        plugin: default_value
-        default_value: 'relators:pht'
-
-  providers:
-    -
-      source: provider
-      plugin: skip_on_empty
-      method: process
-    -
-      plugin: explode
-      delimiter: '|'
-    -
-      plugin: str_to_assoc
-      key: 'name'
-
-  linked_agent_prv:
-    plugin: sub_process
-    source: '@providers'
-    process:
-      target_id:
-        plugin: entity_generate
-        source: name
-        entity_type: taxonomy_term
-        value_key: name
-        bundle_key: vid
-        bundle: 'corporate_body'
-      rel_type:
-        plugin: default_value
-        default_value: 'relators:prv'
-
-  field_linked_agent:
-    plugin: merge
-    source:
-      - '@linked_agent_pht'
-      - '@linked_agent_prv'
 
 # We're making nodes
 destination:
