@@ -33,14 +33,6 @@ process:
     default_value: islandora_object
   title: title
   field_dewey_classification: dewey_classification
-  field_identifier: local_identifier
-  field_subject: subject_topic
-  field_resource_type: type_of_resource
-  field_edition: edition
-  field_place_published: publication_place
-  field_extent: extent
-  field_isbn: isbn
-  field_oclc_number: oclc_number
 
   uid: constants/uid
 
