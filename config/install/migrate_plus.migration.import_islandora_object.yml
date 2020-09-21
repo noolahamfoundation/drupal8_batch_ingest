@@ -32,7 +32,7 @@ process:
     plugin: default_value
     default_value: islandora_object
   title: title
-  field_dewey_classification: dewey_classification
+  field_dewey_classification: field_dewey_classification
 
   uid: constants/uid
 
