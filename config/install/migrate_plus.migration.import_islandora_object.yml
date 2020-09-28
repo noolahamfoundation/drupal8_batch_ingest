@@ -32,9 +32,11 @@ process:
     plugin: default_value
     default_value: islandora_object
   title: title
-  field_dewey_classification: field_dewey_classification
+  field_dewey_classification: dewey_classification
   field_extent : extent
   field_oclc_number: oclc_number
+  field_identifier: local_identifier
+  field_edition: edition
   uid: constants/uid
   field_description: description
 
