@@ -23,7 +23,6 @@ source:
   # You can't enter string literals into a process plugin, but you can give it a constant as a 'source'.
   constants:
 
-
     # Everything gets created as admin
     uid: 1
 
