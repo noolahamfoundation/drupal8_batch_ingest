@@ -33,6 +33,8 @@ process:
     default_value: islandora_object
   title: title
   field_dewey_classification: field_dewey_classification
+  field_extent : extent
+  field_oclc_number: oclc_number
   uid: constants/uid
   field_description: description
 
