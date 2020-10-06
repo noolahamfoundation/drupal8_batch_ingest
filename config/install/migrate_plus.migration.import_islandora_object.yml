@@ -37,6 +37,10 @@ process:
   field_oclc_number: oclc_number
   field_identifier: local_identifier
   field_edition: edition
+  field_sri: sri_lankan_work
+  field_thodarpakam_shelf: thodarpakam_shelf
+  field_language: language
+  field_call_number: call_number
 
   photographers:
     -
@@ -81,6 +85,12 @@ process:
     -
       plugin: entity_generate
       source: genre
+      entity_type: taxonomy_term
+
+  field_resource_type:
+    -
+      plugin: entity_generate
+      source: type_of_resource
       entity_type: taxonomy_term
 
   author:
