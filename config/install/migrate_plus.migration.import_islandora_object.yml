@@ -83,6 +83,33 @@ process:
       source: genre
       entity_type: taxonomy_term
 
+  author:
+    -
+      source: author
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: str_to_assoc
+      key: 'name'
+
+  linked_agent_aut:
+    plugin: sub_process
+    source: '@author'
+    process:
+      target_id:
+        plugin: entity_generate
+        source: name
+        entity_type: taxonomy_term
+        value_key: name
+        bundle_key: vid
+        bundle: 'corporate_body'
+      rel_type:
+        plugin: default_value
+        default_value: 'relators:aut'
+
   linked_agent_prv:
     plugin: sub_process
     source: '@providers'
@@ -103,6 +130,7 @@ process:
     source:
       - '@linked_agent_pht'
       - '@linked_agent_prv'
+      - '@linked_agent_aut'
 
   uid: constants/uid
   field_description: description
