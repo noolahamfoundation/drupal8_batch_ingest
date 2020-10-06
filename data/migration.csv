@@ -1,5 +1,21 @@
-id,local_identifier,title,author,dewey_classification,thodarpakam_shelf,classification_dewey,subject_topic,sri_lankan_work,type_of_resource,genre,language,date_published,edition,publisher,publication_place,extent,isbn,oclc_number,subject_temporal,subject_geographic,subject_person,subject_organization,rights,holdings_print,call_number,book_condition,sub_title,translated_author,note,date_entered,photographer,provider
-1,2465,one Lord One Faith,"Johnsons, Vernon",230 Christianity,230 Dogmatic Theology,,,இல்லை,உரை,நூல் ,ஆங்கிலம்,,1963,Sheed & Ward,London,"VIII, 204p ; 18cm",,30213643,,,,,,Thodarpakam,"230 
-JOH",பயன்படுத்தக்கூடியது,,,,07.07.2020,Clem Onojeghuo,Clawde|Clawbster
-2,9869,The Bible on the Living God,"Iersel, B. Van",231 God,231 God,,,இல்லை,உரை,நூல் ,ஆங்கிலம்,,1965,Sheed & Ward,London,"viii,111p ; 18 cm",,782110929,,,,,Copyrights,Thodarpakam,"231 
-IER",பயன்படுத்தக்கூடியது,,H.J Vaughan (Tra),,07.07.2020,The Collab,Clawde|Clawbster
+local_identifier,title,author,classification_dewey ,thodarpakam_shelf,Subject - Topic,sri_lankan_work,type_of_resource,genre,language,edition,Date Published,publisher,publication_place,extent,isbn,oclc_number,Subject – Temporal,Subject – Geographic,Subject - Person,Subject - Organization,Rights,Holdings - Print,call_number,Book Condition,other_title,translator,editor,compilor,note,Date Entered
+2465,one Lord One Faith,"Johnsons, Vernon",230 Christianity,230 Dogmatic Theology,,இல்லை,உரை,நூல் ,ஆங்கிலம்,,1963,Sheed & Ward,London,"VIII, 204p ; 18cm",,30213643,,,,,,Thodarpakam,"230 
+JOH",பயன்படுத்தக்கூடியது,,,,,,07.07.2020
+9869,The Bible on the Living God,"Iersel, B. Van",231 God,231 God,,இல்லை,உரை,நூல் ,ஆங்கிலம்,,1965,Sheed & Ward,London,"viii,111p ; 18 cm",,782110929,,,,,Copyrights,Thodarpakam,"231 
+IER",பயன்படுத்தக்கூடியது,,H.J Vaughan ,,,,07.07.2020
+9833,Twentieth Century Theology in the Making,"Pelikan, Jaroslav | Wilson, R.A.  ",230 Christianity,230 Dogmatic Theology,,இல்லை,உரை,நூல் ,ஆங்கிலம்,,1971,Harper & Row,New York,"iv, 416p ; 18cm",,908969449,,,,,Copyrights,Thodarpakam,"230 
+ PEL",பயன்படுத்தக்கூடியது,II The Theological Dialogue Issues and Resources,,,,,07.07.2020
+2458,A Handbook of Christian Theology,"Halverson, Marvin | Cohen, Arthur ",230 Christianity,230 Dogmatic Theology,,இல்லை,உரை,நூல் ,ஆங்கிலம்,,1962,Collins,London,"iv, 382p ; 18cm",,744626097,,,,,Copyrights,Thodarpakam,"230 
+ HAL",பயன்படுத்தக்கூடியது,,,,,,07.07.2020
+2228,Patmos -When The Heavens Opened,"Basilea, Schlink",225 New Testament,225 New Testament,,இல்லை,உரை,வர்ணனை,ஆங்கிலம்,,1976,Lakeland,London,"iv, 127p ; 18cm",551007567,44013356,,,,,Copyrights,Thodarpakam,"225
+SCH",பயன்படுத்தக்கூடியது,Patmos-da der Himmel offen war. (Original Title),,,,,07.07.2020
+2462,The Courage To Be,"Tillich, Paul ",230 Christianity,230 Dogmatic Theology,,இல்லை,உரை,நூல் ,ஆங்கிலம்,,1962,Collins,London,"Xii, 183p ; 18cm",,1141916610,,,,,Copyrights,Thodarpakam,"225
+TIL",பயன்படுத்தக்கூடியது,The Fontana Library Theology and philosophy.(Series Title),,,,,07.07.2020
+18510,Theology For Beginners,"Sheed, F. J",230 Christianity,230 Dogmatic Theology,,இல்லை,உரை,நூல் ,ஆங்கிலம்,5th Ed,1961,Sheed & Ward,London,"iv, 192p ; 18cm",,455043962,,,,,Copyrights,Thodarpakam,"230
+SHE",பயன்படுத்தக்கூடியது,,,,,,07.07.2020
+4214,Mission And Grace (vol 1),"Rahner, Karl",230 Christianity,230 Dogmatic Theology,,இல்லை,உரை,நூல் ,ஆங்கிலம்,2nd Ed,1964,Sheed & Ward,London,"Vii, 325p ; 18cm",,1007481380,,,,,Copyrights,Thodarpakam,"230
+RAH",பயன்படுத்தக்கூடியது,,Cecily Hastings ,,,,07.07.2020
+4215,Mission And Grace (vol 2),"Rahner, Karl",230 Christianity,230 Dogmatic Theology,,இல்லை,உரை,நூல் ,ஆங்கிலம்,,1964,Sheed & Ward,London,"Vii, 228p ; 18cm",,1000727898,,,,,Copyrights,Thodarpakam,"230
+RAH",பயன்படுத்தக்கூடியது,,Cecily Hastings and Richard Strachan ,,,,07.07.2020
+6307,But That I Can't Believe,"Robinson, A.T John",230 Christianity,230 Dogmatic Theology,,இல்லை,உரை,நூல் ,ஆங்கிலம்,8th Ed,1974,Collins,London,"Xii, 127p ; 18cm",,639839372,,,,,Copyrights,Thodarpakam,"230
+ROB",பயன்படுத்தக்கூடியது,,,,,,07.07.2020
