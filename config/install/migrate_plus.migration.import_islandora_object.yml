@@ -77,6 +77,16 @@ process:
       plugin: str_to_assoc
       key: 'name'
 
+  field_genre:
+    process:
+      target_id:
+        plugin: entity_generate
+        source: genre
+        entity_type: taxonomy_term
+        value_key: name
+        bundle_key: vid
+        bundle: 'corporate_body'
+
   linked_agent_prv:
     plugin: sub_process
     source: '@providers'
