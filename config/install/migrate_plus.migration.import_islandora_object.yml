@@ -11,14 +11,14 @@ migration_group: drupal8_batch_ingest
 source:
   plugin: csv
   path: modules/drupal8_batch_ingest/data/migration.csv
-  ids: [id]
+  ids: [local_identifier]
 
   # 1 means you have a header row, 0 means you don't
   header_row_count: 1
 
   # Each migration needs a unique key per row in the csv.  Here we're using the file path.
   keys:
-    - id
+    - local_identifier
 
   # You can't enter string literals into a process plugin, but you can give it a constant as a 'source'.
   constants:
@@ -41,45 +41,10 @@ process:
   field_thodarpakam_shelf: thodarpakam_shelf
   field_language: language
   field_call_number: call_number
-
-  photographers:
-    -
-      source: photographer
-      plugin: skip_on_empty
-      method: process
-    -
-      plugin: explode
-      delimiter: '|'
-    -
-      plugin: str_to_assoc
-      key: 'name'
-
-  linked_agent_pht:
-    plugin: sub_process
-    source: '@photographers'
-    process:
-      target_id:
-        plugin: entity_generate
-        source: name
-        entity_type: taxonomy_term
-        value_key: name
-        bundle_key: vid
-        bundle: person
-      rel_type:
-        plugin: default_value
-        default_value: 'relators:pht'
-
-  providers:
-    -
-      source: provider
-      plugin: skip_on_empty
-      method: process
-    -
-      plugin: explode
-      delimiter: '|'
-    -
-      plugin: str_to_assoc
-      key: 'name'
+  field_place_published: publication_place
+  field_note: note
+  field_alternative_title: other_title
+  field_isbn: isbn
 
   field_genre:
     -
@@ -120,9 +85,21 @@ process:
         plugin: default_value
         default_value: 'relators:aut'
 
-  linked_agent_prv:
+  translator:
+    -
+      source: translator
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: str_to_assoc
+      key: 'name'
+
+  linked_agent_trl:
     plugin: sub_process
-    source: '@providers'
+    source: '@translator'
     process:
       target_id:
         plugin: entity_generate
@@ -133,14 +110,69 @@ process:
         bundle: 'corporate_body'
       rel_type:
         plugin: default_value
-        default_value: 'relators:prv'
+        default_value: 'relators:trl'
+
+  editor:
+    -
+      source: editor
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: str_to_assoc
+      key: 'name'
+
+  linked_agent_edt:
+    plugin: sub_process
+    source: '@editor'
+    process:
+      target_id:
+        plugin: entity_generate
+        source: name
+        entity_type: taxonomy_term
+        value_key: name
+        bundle_key: vid
+        bundle: 'corporate_body'
+      rel_type:
+        plugin: default_value
+        default_value: 'relators:edt'
+
+  publisher:
+    -
+      source: publisher
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: explode
+      delimiter: '|'
+    -
+      plugin: str_to_assoc
+      key: 'name'
+
+  linked_agent_pbl:
+    plugin: sub_process
+    source: '@publisher'
+    process:
+      target_id:
+        plugin: entity_generate
+        source: name
+        entity_type: taxonomy_term
+        value_key: name
+        bundle_key: vid
+        bundle: 'corporate_body'
+      rel_type:
+        plugin: default_value
+        default_value: 'relators:pbl'
 
   field_linked_agent:
     plugin: merge
     source:
-      - '@linked_agent_pht'
-      - '@linked_agent_prv'
       - '@linked_agent_aut'
+      - '@linked_agent_trl'
+      - '@linked_agent_edt'
+      - '@linked_agent_pbl'
 
   uid: constants/uid
   field_description: description
